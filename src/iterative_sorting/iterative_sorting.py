@@ -25,19 +25,32 @@ def selection_sort(arr):
             # multiple assignment format val_1, val_2 = val_2, val_1
         arr[i], arr[smallest_index] = arr[smallest_index], arr[i]
 
-    print(arr)
+    return arr
 
 
-selection_sort(z)
+# selection_sort(z)
 # TO-DO:  implement the Bubble Sort function below
 
 
 def bubble_sort(arr):
+    # loop the array
+    for i in range(len(arr)):
+        print(f"Loop:{i}")
+    # compare each element to neighbor ( + 1)
+    # if element > neighbor swap them
+        for a in range(0, len(arr) - 1):
+            if arr[a] > arr[a + 1]:
+                # use multiple assignment
+                arr[a], arr[a + 1] = arr[a + 1], arr[a]
+                print(arr)
 
     return arr
 
 
+bubble_sort(z)
 # STRETCH: implement the Count Sort function below
+
+
 def count_sort(arr, maximum=-1):
 
     return arr
