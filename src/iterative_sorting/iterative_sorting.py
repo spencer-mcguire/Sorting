@@ -1,11 +1,11 @@
 # TO-DO: Complete the selection_sort() function below
 
-z = [3, 2, 5, 6, 1, 7, 8, 10, 9]
+z = [3, 2, 5, 6, 1, 7, 4, 8, 10, 9]
 
 
 def selection_sort(arr):
     # loop through n-1 elements
-    for i in range(0, len(arr)):
+    for i in range(0, len(arr) - 1):
         cur_index = i
         smallest_index = cur_index
        # print(f"looping: {smallest_index}")
@@ -14,7 +14,7 @@ def selection_sort(arr):
         # loop over the array starting at smallest index
         # compare smallest index to the next index through the loop
         # if element is less than the smallest set element as new min
-        for a in range(i + 1, len(arr)):
+        for a in range(cur_index, len(arr)):
             # print(arr[a])
             if arr[smallest_index] > arr[a]:
                 smallest_index = a
@@ -22,6 +22,7 @@ def selection_sort(arr):
            # print(f"new smallest: {smallest_index}")
            # print(arr[smallest_index])
             # TO-DO: swap
+            # multiple assignment format val_1, val_2 = val_2, val_1
         arr[i], arr[smallest_index] = arr[smallest_index], arr[i]
 
     print(arr)
