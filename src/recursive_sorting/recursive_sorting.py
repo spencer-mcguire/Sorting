@@ -6,12 +6,12 @@ def merge(arrA, arrB):
     # TO-DO
     #print(f"merged arr: {merged_arr}")
     # i increments every time
-    i = 0
+
     # j k increment as the value is smaller and become the new index being added and helps sort
     j = 0
     k = 0
     # loop thru elements
-    for i in range(i, elements):
+    for i in range(elements):
         #print(f"arrA: {arrA}, arrB: {arrB}")
         if j >= len(arrA):  # check to see if A is empty
             merged_arr[i] = arrB[k]
@@ -36,13 +36,15 @@ def merge(arrA, arrB):
 # TO-DO: implement the Merge Sort function below USING RECURSION
 
 
+
 def merge_sort(arr):
     # TO-DO
     # if len(arr) <= 1
     if len(arr) > 1:
         # mid = length//2 so always a whole num
         mid = len(arr) // 2
-        # print(arr[mid:])
+        print(f"left:{arr[:mid]}")
+        print(f"right:{arr[mid:]}")
         # lhs sort rhs sort
         # everything to the left of index mid [:mid]
         lhs = merge_sort(arr[:mid])
