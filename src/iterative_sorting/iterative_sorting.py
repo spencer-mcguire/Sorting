@@ -34,10 +34,12 @@ def selection_sort(arr):
 
 def bubble_sort(arr):
     # loop the array
-    for i in range(len(arr)):
-        print(f"Loop:{i}")
-    # compare each element to neighbor ( + 1)
-    # if element > neighbor swap them
+    swap = True
+    while swap == True:
+        # for i in range(len(arr)):
+        # print(f"Loop:{i}")
+        # compare each element to neighbor ( + 1)
+        # if element > neighbor swap them
         for a in range(0, len(arr) - 1):
             if arr[a] > arr[a + 1]:
                 # use multiple assignment
